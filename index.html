@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our First Two Months</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #fdf6f0;
+      color: #4a3728;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px 60px;
+      background: linear-gradient(160deg, #fff0ec 0%, #fde8e4 50%, #fdf6f0 100%);
+    }
+    .hero .hearts {
+      font-size: 1.4rem;
+      letter-spacing: 8px;
+      color: #e8837a;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      font-style: italic;
+      color: #c0544a;
+      line-height: 1.2;
+    }
+    .hero .subtitle {
+      margin-top: 14px;
+      font-size: 1rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #b07a72;
+    }
+    .hero .divider {
+      margin: 32px auto 0;
+      width: 80px;
+      border: none;
+      border-top: 1px solid #e8b4ae;
+    }
+
+    .timeline {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 20px 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 90px;
+    }
+
+    .slide { position: relative; }
+
+    .slide-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.75rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #c9897f;
+      margin-bottom: 14px;
+    }
+
+    .slide-img-wrap {
+      width: 100%;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(180, 80, 70, 0.12);
+      background: #f5e6e3;
+      aspect-ratio: 4 / 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .slide-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .slide-img-wrap img:hover { transform: scale(1.02); }
+
+    .slide-img-wrap .img-placeholder {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      color: #c9897f;
+    }
+    .slide-img-wrap img.broken + .img-placeholder { display: flex; }
+    .img-placeholder .ph-icon { font-size: 3rem; }
+    .img-placeholder .ph-text { font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; }
+
+    .slide-caption {
+      margin-top: 22px;
+      padding: 0 4px;
+    }
+    .slide-caption .date-tag {
+      font-size: 0.72rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #c9897f;
+      margin-bottom: 8px;
+    }
+    .slide-caption p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      line-height: 1.75;
+      color: #5a3a2e;
+    }
+
+    .separator {
+      text-align: center;
+      color: #e8b4ae;
+      font-size: 1.1rem;
+      letter-spacing: 10px;
+      margin: -40px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 60px 20px 80px;
+      background: linear-gradient(0deg, #fde8e4 0%, #fdf6f0 100%);
+    }
+    footer .big-heart { font-size: 2.5rem; }
+    footer p {
+      margin-top: 16px;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #c0544a;
+    }
+
+    @media (max-width: 480px) {
+      .timeline { gap: 60px; }
+      .slide-img-wrap { aspect-ratio: 3 / 4; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hearts">&#9825; &#9825; &#9825;</div>
+    <h1>Our First Two Months</h1>
+    <p class="subtitle">A little love story</p>
+    <hr class="divider" />
+  </section>
+
+  <main class="timeline">
+
+    <div class="slide">
+      <div class="slide-number">Slide 01</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_0930.JPG" alt="Slide 1" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 01</div>
+        <p>She was in Mexico for a whole week. Seven days never felt so long.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 02</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8080.jpg" alt="Slide 2" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 02</div>
+        <p>Before she flew out, she did my makeup.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 03</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8275.jpg" alt="Slide 3" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 03</div>
+        <p>Back at her place after the flight. After a week apart, finally together again.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 04</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8278.jpg" alt="Slide 4" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 04</div>
+        <p>That night we got Indian food because we were hungry and baked. Perfect reunion meal.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 05</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8379.jpg" alt="Slide 5" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 05</div>
+        <p>The next day we went to the clay cafe. Creative day.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 06</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8384.jpg" alt="Slide 6" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 06</div>
+        <p>Our first legos.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 07</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8390.jpg" alt="Slide 7" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 07</div>
+        <p>Boba at Majestea. We went through a little boba phase.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 08</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8433.jpg" alt="Slide 8" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 08</div>
+        <p>Matcha at Maya. We have a type.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 09</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8437.jpg" alt="Slide 9" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 09</div>
+        <p>Cobbler's Path. A walk we'll probably do a hundred more times.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 10</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8452.jpg" alt="Slide 10" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 10</div>
+        <p>Grocery run together. Domestic bliss, honestly.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 11</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8487.jpg" alt="Slide 11" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 11</div>
+        <p>Dinner at Bellissimo. A good one.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 12</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8496.jpg" alt="Slide 12" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 12</div>
+        <p>The next morning we made breakfast together — Anderson's maple blueberry sausages and pancakes. Some mornings are just perfect.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 13</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8538.jpg" alt="Slide 13" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 13</div>
+        <p>The day Maria met Ferg. He approved.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 14</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8548.jpg" alt="Slide 14" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 14</div>
+        <p>The bear photo Maria reluctantly agreed to. Worth every second of convincing.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 15</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8553.jpg" alt="Slide 15" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 15</div>
+        <p>Making skewers together. The prep is half the fun.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 16</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8555.jpg" alt="Slide 16" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 16</div>
+        <p>Our skewers! We ate well that night.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 17</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8596.jpg" alt="Slide 17" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 17</div>
+        <p>Our first time at Birdie. Not our last.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 18</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8613.jpg" alt="Slide 18" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 18</div>
+        <p>We visited Carboneer and her favorite cafe back home — Dark Star Cafe. Getting to see her world felt special.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 19</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8621.jpg" alt="Slide 19" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 19</div>
+        <p>She got an iPad that day. The excitement was contagious.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 20</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8814.jpg" alt="Slide 20" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 20</div>
+        <p>That night we made pizza together. Homemade everything hits different.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 21</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8824.jpg" alt="Slide 21" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 21</div>
+        <p>Back at Birdie. Some places just become yours.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 22</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8855.jpg" alt="Slide 22" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 22</div>
+        <p>Stacked. Need I say more.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 23</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8891.jpg" alt="Slide 23" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 23</div>
+        <p>Homemade bolognese night. The kitchen smelled incredible.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 24</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8923.jpg" alt="Slide 24" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 24</div>
+        <p>Steak tacos — Maria made these all by herself. So unbelievably proud of her.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 25</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_8984.jpg" alt="Slide 25" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 25</div>
+        <p>She cut up fruit for me. Such a small thing. Made me really happy.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 26</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_9845.jpg" alt="Slide 26" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 26</div>
+        <p>Our first picture together. The beginning of everything.</p>
+      </div>
+    </div>
+
+    <div class="separator">&#183; &#183; &#9825; &#183; &#183;</div>
+
+    <div class="slide">
+      <div class="slide-number">Slide 27</div>
+      <div class="slide-img-wrap">
+        <img src="IMG_9893.jpg" alt="Slide 27" onerror="this.classList.add('broken')" />
+        <div class="img-placeholder"><span class="ph-icon">&#127800;</span><span class="ph-text">Photo coming soon</span></div>
+      </div>
+      <div class="slide-caption">
+        <div class="date-tag">Memory 27</div>
+        <p>My favorite picture of us. This one.</p>
+      </div>
+    </div>
+
+
+  </main>
+
+  <footer>
+    <div class="big-heart">&#9825;</div>
+    <p>Here's to everything that comes next.</p>
+  </footer>
+
+</body>
+</html>
